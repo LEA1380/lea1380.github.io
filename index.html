@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<style>
+			
+			div {
+				height: 100px;
+				margin: 20px;
+				width: 100px;
+				background-color: red;
+			}
+			
+			<!-- CSS way
+			div.a.b.c.d {
+				background-color: blue;
+			}-->
+		</style>
+			<!-- CSS way
+			<script>
+			 document.querySelector("div.a.b.c.d");
+			</script> -->
+		
+	</head>
+	
+	<body>
+		<div class="a b"></div>
+		<div class="a b"></div>
+		<div class="a b c"></div>
+		<div class="a b c d"></div>
+		<div class="a b c d e"></div>
+		
+		<input class="a b c d e" type="text"/>
+		
+		<script>
+		//Get all the DIVs which have at least classes a,b,c and d - and give them background-color which is blue
+			var arr = document.querySelector("div.a.b.c.d");
+			for (i = 0, i < arr.length; i++);
+			arr[i].style.backgroundColor = "blue";
+		</script>
+	</body>
+</html>
